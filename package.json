@@ -1,0 +1,22 @@
+{
+  "name": "kaamelott-api-spa",
+  "version": "1.0.0",
+  "description": "Kaamelott toutes les infos",
+  "main": "./API/index.js",
+  "scripts": {
+    "start:api": "cd API && pnpm run dev",
+    "start:spa": "cd SPA && pnpm run dev",
+    "dev": "concurrently \"pnpm run start:api\" \"pnpm run start:spa\"",
+    "install:all": "pnpm install && cd api && pnpm install && cd ../spa && pnpm install"
+  },
+  "keywords": [
+    "kaamelott",
+    "api",
+    "spa"
+  ],
+  "author": "MJMCoding",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.2.0"
+  }
+}

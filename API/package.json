@@ -1,0 +1,27 @@
+{
+  "name": "kaamelott_back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "API backend pour le projet Kaamelott utilisant Express, Sequelize et PostgreSQL.",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "pg": "^8.13.0",
+    "pg-hstore": "^2.3.4",
+    "scrypt-js": "^3.0.1",
+    "sequelize": "^6.37.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}

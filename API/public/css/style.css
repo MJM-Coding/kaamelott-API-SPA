@@ -1,0 +1,280 @@
+:root {
+    --color-header-bg: #000;
+    --color-background: #302f2ff3;
+    --color-footer-bg: #000;
+    --color-text: #f0e6d2;
+    --color-gold: #d4af37;
+    --color-contour-apropos: #fff;
+    --color-dark-background: #1a1919;
+    --color-text-aPropos: #f0f0f0;
+  }
+  
+
+/* header et footer dans style.css */
+
+
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/*! Styles pour le header */
+.header {
+  width: 100vw;
+  height: 15vh;
+  background: var(--color-header-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  color: white;
+}
+
+/** Styles pour le logo et le titre */
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50vw;
+}
+
+/** Styles pour le logo */
+.header_logo {
+  width: 15%;
+  height: auto;
+}
+
+/*! Styles pour la navbar */
+.navbar {
+  width: 50vw;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: 1.2rem;
+  transition: color 0.3s, transform 0.4s;
+}
+
+.navbar ul li a:hover {
+  color: var(--color-gold);
+  transform: scale(1.1);
+}
+
+/*! Styles pour le footer */
+footer {
+  background: var(--color-footer-bg) !important;
+  color: var(--color-text);
+  padding: 1rem 2rem; /* Augmente le padding horizontal */
+  height: auto;
+  text-align: center;
+  width: 100%;
+}
+
+/** Styles pour les réseaux sociaux du footer */
+.social-media {
+  background: var(--color-background);
+  color: var(--color-text);
+  padding: 1rem;
+  text-align: center;
+}
+
+.social-media a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 50px;
+  font-size: 1rem;
+  color: var(--color-text);
+  transition: transform 0.3s;
+}
+
+.social-media a:hover {
+  transform: scale(1.1);
+}
+
+/** Couleurs spécifiques pour les icônes des réseaux sociaux */
+.fab.fa-facebook {
+  color: #3b5998;
+}
+
+.social-link.facebook:hover {
+  color: #3b5998;
+}
+
+.fab.fa-twitter {
+  color: #1da1f2;
+}
+
+.social-link.twitter:hover {
+  color: #1da1f2;
+}
+
+.fab.fa-instagram {
+  color: #e1306c;
+}
+
+.social-link.instagram:hover {
+  color: #e1306c;
+}
+
+/* !Styles par défaut pour la navbar */
+.navbar {
+  width: 50vw;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* !Styles pour le bouton du menu burger */
+.burger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--color-text);
+}
+
+/*!----- Media Queries pour les tablettes----- */
+@media screen and (max-width: 1024px) {
+  html,
+  body {
+    overflow-y: auto;
+  }
+
+  .main,
+  .main_top_section {
+    overflow-y: auto;
+  }
+
+  /**Styles pour Header */
+  .header_title {
+    display: none;
+  }
+
+  /**Styles pour le logo de la Navbar */
+  .header_logo {
+    min-width: 100px;
+  }
+
+  /** Ajustements pour la section principale */
+  .main_top_section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /** Ajustements de l'image principale pour tablettes */
+  .main_right {
+    width: 100%;
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .image-container {
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+    aspect-ratio: auto;
+    height: auto;
+  }
+
+  .image-container img {
+    position: static;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    object-fit: contain;
+    transition: none;
+  }
+
+  /** Suppression des effets de survol pour tablettes */
+  .main-image {
+    display: block;
+    opacity: 1;
+  }
+
+  .hover-image {
+    display: none;
+  }
+
+  /* Supprime les effets de survol */
+  .image-container:hover .main-image {
+    opacity: 1;
+  }
+
+  .image-container:hover .hover-image {
+    opacity: 0;
+  }
+
+  /** Ajustements du contenu principal pour tablettes */
+  .main_left {
+    width: 90%;
+    padding: 0 20px;
+  }
+
+  .info {
+    margin-bottom: 2rem;
+  }
+
+  /** Modifications du footer pour tablettes */
+  .social-links {
+    width: 100%;
+  }
+
+  .social-media a {
+    margin: 5px 10px;
+  }
+}
+
+/*!----- Media Queries pour les Smartphones----- */
+@media screen and (max-width: 767px) {
+  .header_logo {
+    min-width: 100px;
+  }
+
+  /** Configuration du menu burger pour smartphones */
+  .header .navbar {
+    position: relative;
+    width: auto;
+  }
+
+  .header .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 150px;
+    background-color: var(--color-background);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .header .nav-links.show {
+    display: flex;
+  }
+
+  .header .burger-menu {
+    display: block;
+    cursor: pointer;
+    z-index: 1001;
+  }
+}

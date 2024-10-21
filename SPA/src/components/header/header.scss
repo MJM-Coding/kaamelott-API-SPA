@@ -1,0 +1,110 @@
+@import '../../stylesCommun/commun.scss';  // import du fichier commun
+
+header {
+  width: 100vw;
+  height: calc(11.4vh + 2rem); /* Ajuste selon la taille de la fenêtre + une hauteur fixe en rem */
+  background: $color-header-bg;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  color: white;
+
+  // Styles pour le formulaire de connexion
+  .login-form {
+    display: flex;
+    align-items: center; // Aligner verticalement les éléments
+
+    input {
+      margin-left: 10px; // Espacement entre les champs
+      padding: 10px;
+      border: 1px solid $color-gold; // Bordure dorée
+      border-radius: 4px; // Coins arrondis
+      background-color: $color-background; // Fond des champs
+      color: $color-text; // Couleur du texte
+      transition: border-color 0.3s ease; // Transition pour la bordure
+
+      &:focus {
+        outline: none; // Retirer l'outline par défaut
+        border-color: $color-gold; // Changer la couleur de la bordure au focus
+        background-color: $color-dark-background; // Changer le fond au focus
+      }
+
+      &::placeholder {
+        color: $color-text; // Couleur du texte du placeholder
+        opacity: 0.7; // Opacité pour le placeholder
+      }
+    }
+
+    button {
+      margin-left: 10px; // Espacement entre les champs et le bouton
+      padding: 10px 15px;
+      border: none; // Pas de bordure
+      border-radius: 4px; // Coins arrondis
+      background-color: $color-header-bg; // Fond doré
+      color: $color-text; // Couleur du texte
+      cursor: pointer; // Curseur pointer
+      transition: background-color 0.3s ease; // Transition pour l'effet hover
+
+      &:hover {
+        background-color: $color-button-connexion; // Assombrir le fond au survol
+      }
+    }
+
+    .register-button {
+      margin-left: 10px; // Espacement entre le bouton de connexion et d'inscription
+      padding: 10px 15px; // Même padding que le bouton de connexion
+      border: none; // Pas de bordure
+      border-radius: 4px; // Coins arrondis
+      background-color: $color-header-bg; // Fond doré
+      color: $color-text; // Couleur du texte
+      cursor: pointer; // Curseur pointer
+      text-decoration: none; // Supprimer le soulignement
+      transition: background-color 0.3s ease; // Transition pour l'effet hover
+
+      &:hover {
+        background-color: $color-button-register// Assombrir le fond au survol
+      }
+    }
+  }
+}
+
+.header_logoLeft {
+  width: 20vw; /* 50% de la largeur du header */
+  align-items: center;
+}
+
+.header_title {
+  width: 70%;
+  height: auto;
+}
+
+.navbar {
+  width: 30vw; /* L'autre moitié du header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 50px;
+  margin-right: 50px;
+  list-style-type: none;
+  width: 100vw;
+
+  li {
+    a {
+      text-decoration: none;
+      color: $color-text;
+      font-size: 18px;
+
+      &:hover {
+        color: $color-gold;
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+:root {
+  --color-header-bg: #000;
+  --color-background: #302f2ff3; /* Fond général de la page */
+  --color-footer-bg: #000;
+  --color-text: #f0e6d2; /* Texte principal */
+  --color-gold: #d4af37; /* Doré pour les accents */
+  --color-contour-apropos: #fff;
+  --color-dark-background: #1a1919; /* Fond sombre global */
+  --color-text-aPropos: #f0f0f0; /* Texte clair pour la section À propos */
+  --color-card-bg: #2d2a2a; /* Fond sombre pour les cartes */
+  --color-border: #b38842; /* Doré pour les bordures */
+  --color-hover-bg: #3a3a3a; /* Fond plus clair lors du survol */
+  --color-title: #b38842; /* Doré pour les titres */
+}
+
+/* Corps de la page avec fond sombre */
+body {
+  background-color: #313030; /* Fond sombre global */
+  color: var(--color-text); /* Texte clair sur fond sombre */
+  font-family: "Cinzel", serif; /* Police inspirée du médiéval */
+  margin: 0;
+  padding: 0;
+}
+
+/* Style du titre principal */
+h1 {
+  font-size: 3rem; /* Taille du titre assez grande */
+  color: var(--color-gold); /* Couleur dorée pour un côté royal */
+  text-align: center; /* Centrer le texte */
+  text-transform: uppercase; /* Mettre le texte en majuscules */
+  letter-spacing: 3px; /* Espacement des lettres pour donner un côté épique */
+  margin-bottom: 3rem; /* Espacement sous le titre */
+  text-shadow: 3px 3px 10px var(--color-hover-bg); /* Ombre pour ajouter du relief au texte */
+  padding: 1rem; /* Ajouter un peu d'espace autour du titre */
+  border-bottom: 3px solid var(--color-border); /* Ligne dorée en dessous du titre pour le mettre en valeur */
+}
+
+
+/* Liste des personnages */
+.personnages-list {
+  display: flex;  /* Utilisation de flexbox */
+  flex-wrap: wrap; /* Permet de faire passer les cartes à la ligne suivante */
+  justify-content: space-between; /* Espace entre les éléments */
+  gap: 2rem; /* Espace entre les cartes */
+  width: 100%;
+  padding: 2rem;
+  background: var(--color-background); /* Fond spécifique à la liste */
+  color: var(--color-text); /* Texte principal */
+
+}
+
+/* Style des cartes des personnages */
+.personnage-card {
+  width: calc(25% - 2rem);  /* 25% de largeur pour 4 cartes par ligne avec espace entre elles */
+  background-color: var(--color-dark-background);  /* Fond sombre pour les cartes */
+  border: 2px solid var(--color-border); /* Bordure dorée autour des cartes */
+  border-radius: 10px;  /* Coins arrondis pour les cartes */
+  padding: 1rem;
+  box-sizing: border-box; /* Assure que la bordure est incluse dans le calcul de la largeur */
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Pour aligner le contenu verticalement dans la carte */
+  justify-content: flex-start; /* Aligne le contenu vers le haut de la carte */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Transition pour les effets */
+}
+
+.personnage-card:hover {
+  background-color: var(--color-hover-bg); /* Fond plus clair lors du survol */
+  transform: translateY(-10px); /* Légère élévation au survol pour un effet dynamique */
+}
+
+/* Images dans les cartes */
+.personnage-card img {
+  max-width: 100%;  /* Assure que l'image ne dépasse pas la largeur de la carte */
+  height: auto; /* Maintient les proportions de l'image */
+  border-radius: 8px; /* Coins arrondis pour les images */
+  margin-bottom: 1rem; /* Espace entre l'image et le texte */
+}
+
+/* Titres des personnages dans les cartes */
+.personnage-card h2 {
+  font-size: 1.8rem;  /* Taille plus grande pour le titre */
+  margin-bottom: 1rem; /* Espacement entre le nom et la description */
+  color: var(--color-title); /* Couleur dorée pour le titre */
+  letter-spacing: 1px; /* Espacement des lettres pour plus de style */
+}
+
+/* Description des personnages dans les cartes */
+.personnage-card p {
+  font-size: 1rem;
+  color: var(--color-text-aPropos); /* Couleur du texte de description */
+  line-height: 1.6;  /* Pour aérer le texte */
+}
+
+/* Responsive : Tablettes */
+@media screen and (max-width: 1024px) {
+  .personnage-card {
+    width: calc(50% - 2rem);  /* 2 cartes par ligne pour les tablettes */
+  }
+}
+
+/* Responsive : Smartphones */
+@media screen and (max-width: 767px) {
+  .personnage-card {
+    width: calc(100% - 2rem);  /* 1 carte par ligne pour les smartphones */
+  }
+}

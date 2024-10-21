@@ -1,0 +1,72 @@
+<%- include ('partials/header', { title: 'Les personnages' , pageName:'character'}) %>
+
+    <ul class="nav-links">
+      <li><a href="/">Accueil</a></li> 
+      <li><a href="/les-livres">Les livres</a></li>
+      <li><a href="#film">Le film</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<!-- fin du header -->
+
+
+
+<h1>Liste des Personnages</h1>
+<ul>
+    <% characters.forEach(character => { %>
+        <li>
+            <h2><%= character.name %></h2>  <!-- Affiche le nom du personnage -->
+            <% if (character.image_url) { %>
+                <img src="<%= character.image_url %>" alt="<%= character.name %>">  <!-- Affiche l'image du personnage si elle existe -->
+            <% } %>
+            <p><%= character.description %></p>  <!-- Affiche la description du personnage -->
+        </li>
+    <% }) %>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include ('partials/footer') %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

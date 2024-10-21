@@ -1,0 +1,70 @@
+@import '../../stylesCommun/commun.scss';  // Import du fichier commun
+
+.characters {
+  padding: 20px;
+  background-color: $color-background;
+  color: $color-text;
+
+  // Titre principal
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  // Liste des personnages
+  .character-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+
+    .character-item {
+      background-color: $color-dark-background;
+      border: 1px solid $color-gold;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      margin: 15px;
+      padding: 15px;
+      width: 200px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      // Animation au survol
+      &:hover {
+        transform: translateY(-20px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+      }
+
+      // Nom du personnage
+      h2 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+      // Photo du personnage
+      .character-photo {
+        width: 100%;
+        border-radius: 4px;
+        margin-bottom: 10px;
+      }
+
+      // Informations supplémentaires
+      p {
+        margin: 5px 0;
+
+        strong {
+          color: $color-gold;
+          font-weight: bold;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  // Section de chargement ou d'erreur
+  .loading, .error {
+    text-align: center;
+    color: $color-gold;
+  }
+}
