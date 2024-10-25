@@ -1,0 +1,1 @@
+{"root":["./src/App.tsx","./src/api.tsx","./src/main.tsx","./src/components/characters/characters.tsx","./src/components/films/films.tsx","./src/components/footer/footer.tsx","./src/components/header/header.tsx","./src/components/homePage/homePage.tsx","./src/components/livres/livres.tsx","./src/types/react-helmet.d.ts","./src/types/vite-env.d.ts"],"version":"5.6.3"}

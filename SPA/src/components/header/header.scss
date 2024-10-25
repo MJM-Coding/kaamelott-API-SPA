@@ -1,9 +1,9 @@
-@import '../../stylesCommun/commun.scss';  // import du fichier commun
+@use '../../stylesCommun/commun.scss' as commun;  // import du fichier commun
 
 header {
   width: 100vw;
   height: calc(11.4vh + 2rem); /* Ajuste selon la taille de la fenêtre + une hauteur fixe en rem */
-  background: $color-header-bg;
+  background: commun.$color-header-bg;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,20 +18,20 @@ header {
     input {
       margin-left: 10px; // Espacement entre les champs
       padding: 10px;
-      border: 1px solid $color-gold; // Bordure dorée
+      border: 1px solid commun.$color-gold; // Bordure dorée
       border-radius: 4px; // Coins arrondis
-      background-color: $color-background; // Fond des champs
-      color: $color-text; // Couleur du texte
+      background-color: commun.$color-background; // Fond des champs
+      color: commun.$color-text; // Couleur du texte
       transition: border-color 0.3s ease; // Transition pour la bordure
 
       &:focus {
         outline: none; // Retirer l'outline par défaut
-        border-color: $color-gold; // Changer la couleur de la bordure au focus
-        background-color: $color-dark-background; // Changer le fond au focus
+        border-color: commun.$color-gold; // Changer la couleur de la bordure au focus
+        background-color: commun.$color-dark-background; // Changer le fond au focus
       }
 
       &::placeholder {
-        color: $color-text; // Couleur du texte du placeholder
+        color: commun.$color-text; // Couleur du texte du placeholder
         opacity: 0.7; // Opacité pour le placeholder
       }
     }
@@ -41,13 +41,13 @@ header {
       padding: 10px 15px;
       border: none; // Pas de bordure
       border-radius: 4px; // Coins arrondis
-      background-color: $color-header-bg; // Fond doré
-      color: $color-text; // Couleur du texte
+      background-color: commun.$color-header-bg; // Fond doré
+      color: commun.$color-text; // Couleur du texte
       cursor: pointer; // Curseur pointer
       transition: background-color 0.3s ease; // Transition pour l'effet hover
 
       &:hover {
-        background-color: $color-button-connexion; // Assombrir le fond au survol
+        background-color: commun.$color-button-connexion; // Assombrir le fond au survol
       }
     }
 
@@ -56,14 +56,14 @@ header {
       padding: 10px 15px; // Même padding que le bouton de connexion
       border: none; // Pas de bordure
       border-radius: 4px; // Coins arrondis
-      background-color: $color-header-bg; // Fond doré
-      color: $color-text; // Couleur du texte
+      background-color: commun.$color-header-bg; // Fond doré
+      color: commun.$color-text; // Couleur du texte
       cursor: pointer; // Curseur pointer
       text-decoration: none; // Supprimer le soulignement
       transition: background-color 0.3s ease; // Transition pour l'effet hover
 
       &:hover {
-        background-color: $color-button-register// Assombrir le fond au survol
+        background-color: commun.$color-button-register; // Assombrir le fond au survol
       }
     }
   }
@@ -99,11 +99,11 @@ header {
   li {
     a {
       text-decoration: none;
-      color: $color-text;
+      color: commun.$color-text;
       font-size: 18px;
 
       &:hover {
-        color: $color-gold;
+        color: commun.$color-gold;
       }
     }
   }

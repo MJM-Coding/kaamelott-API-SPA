@@ -1,4 +1,4 @@
-@import '../../stylesCommun/commun.scss';  // import du fichier commun
+@use '../../stylesCommun/commun.scss' as commun;  // Import du fichier commun avec alias
 
 body {
   margin: 0;
@@ -7,24 +7,22 @@ body {
   height: 100vh; /* Empêche le débordement vertical */
 }
 
-.main{
-  width: 100vw ;
+.main {
+  width: 100vw;
   height: auto;
   display: flex;
   flex-direction: column;
-  background: $color-background;
-  color: $color-text;
+  background: commun.$color-background;
+  color: commun.$color-text;
   padding: 0rem;
-  margin: 0rem; 
+  margin: 0rem;
 }
-
 
 .main_top_section {
   display: flex;
   overflow: hidden;
   max-height: calc(100vh * 0.75); /* 75% de la hauteur de la fenêtre */
 }
-
 
 /* Section gauche (présentation et titre) */
 .main_left {
@@ -37,18 +35,18 @@ body {
   margin-bottom: 0;
 
   h1 {
-      text-align: center;
-      font-size: 2.8rem;
-      color: $color-gold;
-      border-bottom: 1px solid $color-gold;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2.8rem;
+    color: commun.$color-gold;
+    border-bottom: 1px solid commun.$color-gold;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   p {
-      line-height: 1.6;
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -62,40 +60,37 @@ body {
   padding: 0;
 }
 
-
-// Info section
+/* Section d'information */
 .info {
-  color: $color-gold;
-  border: 1px solid $color-contour-apropos;
+  color: commun.$color-gold;
+  border: 1px solid commun.$color-contour-apropos;
   border-radius: 8px;
   margin-top: 1rem;
   padding: 1rem;
   text-align: center;
-  background: $color-dark-background;
+  background: commun.$color-dark-background;
 
   h2 {
-    color: $color-gold;
+    color: commun.$color-gold;
     font-size: 2rem;
     margin-bottom: 0.5rem;
-    border-bottom: 1px solid $color-gold;
+    border-bottom: 1px solid commun.$color-gold;
     padding-bottom: 0.5rem;
   }
 
   p {
     font-size: 1rem;
     margin-bottom: 0.3rem;
-    color: $color-text-aPropos;
+    color: commun.$color-text-aPropos;
   }
 }
 
-
-
-// Image container for hover effect
+/* Container d'image pour l'effet de survol */
 .image-container {
   position: relative;
   width: 100%;
-  max-width: 550px; // Adjust as needed
-  aspect-ratio: 3 / 4; // Adjust according to the ratio of your images
+  max-width: 550px; // Ajuster selon les besoins
+  aspect-ratio: 3 / 4; // Ajuster selon le ratio des images
   height: 80%;
 }
 
@@ -105,30 +100,27 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; // Ensure images fit within the container
-  transition: opacity 0.3s ease-in-out; // Smooth transition on hover
+  object-fit: contain; // Assure que les images s'ajustent dans le container
+  transition: opacity 0.3s ease-in-out; // Transition en douceur au survol
   margin: 0;
 }
 
 .main-image {
   opacity: 1;
-  z-index: 1; // Ensure the main image is on top initially
+  z-index: 1; // Assure que l'image principale est au-dessus au début
 }
 
 .hover-image {
   opacity: 0;
-  z-index: 0; // Ensure the hover image is below the main image initially
+  z-index: 0; // Assure que l'image au survol est en dessous initialement
 }
 
-// Hover effect: show hover image, hide main image
+/* Effet de survol : afficher l'image au survol, masquer l'image principale */
 .image-container:hover .main-image {
   opacity: 0;
 }
 
 .image-container:hover .hover-image {
   opacity: 1;
-  z-index: 1; // Bring the hover image to the front when hovered
+  z-index: 1; // Amène l'image au survol au premier plan lorsque survolé
 }
-
-
-

@@ -1,10 +1,9 @@
-@import '../../stylesCommun/commun.scss';  // import du fichier commun
-
+@use '../../stylesCommun/commun.scss' as commun;  // import du fichier commun
 
 // Footer
 footer {
-  background: $color-footer-bg !important;
-  color: $color-text;
+  background: commun.$color-footer-bg !important;
+  color: commun.$color-text;
   padding: 1rem 3rem; /* Augmente le padding horizontal */
   height: auto;
   text-align: center;
@@ -12,15 +11,15 @@ footer {
   margin-top: 0rem;
 }
 
-  
-h2{
-    margin-top: 0rem;
-    color: $color-gold;
+h2 {
+  margin-top: 0rem;
+  color: commun.$color-gold;
 }
+
 /** Styles pour les réseaux sociaux du footer */
 .social-media {
-  background: $color-background;
-  color: $color-gold;
+  background: commun.$color-background;
+  color: commun.$color-gold;
   padding: 1rem;
   text-align: center;
 }
@@ -30,7 +29,7 @@ h2{
   text-decoration: none;
   margin: 0 50px;
   font-size: 1rem;
-  color:  $color-text;
+  color: commun.$color-text;
   transition: transform 0.3s;
 }
 
